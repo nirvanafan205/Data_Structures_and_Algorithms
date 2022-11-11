@@ -55,6 +55,20 @@ void printInorder(struct Node* node)
 	printInorder(node->right);
 }
 
+void printPreorder(struct Node* node)
+{
+	if(node == NULL)
+	{
+		return;
+	}
+
+	//prints the data of the node first
+	cout << node->data << " ";
+	
+	//recursion on the left
+	printPreorder(node->left);
+	printPreorder(node->right);
+}
 
 int main()
 {
@@ -67,8 +81,12 @@ int main()
 	//right child
 	root->right = newNode(3);
 
+	root->left->left = newNode(4);
+
+	root->left->right = newNode(5);
+
 	//print node
-	printInorder(root);
+	printInorder(root); //4 2 5 1 3
+	cout << endl;
+	printPreorder(root); //
 }
-
-
