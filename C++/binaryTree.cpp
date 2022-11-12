@@ -3,6 +3,7 @@
 using namespace std;
 
 // binary tree set up
+// structs are blueprints that are used to create the instance of a class
 struct Node
 {
 	int data; //node value
