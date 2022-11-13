@@ -20,14 +20,24 @@ int main()
 	cout << "firstValue: " << firstValue << endl;
 	cout << "secondValue: " << secondValue << endl;
 
-	int first, second;
-	int *p1, *p2;
+	int first = 5, second = 15; //initial values
 
-	p1 = &first;
-	p2 = &second;
+	cout << "\nValues before pointer changes\nFirst value: " << first << endl;
+	cout << "Second value: " << second << endl;
 
-	*p1 = 10;
-	*p2 = *p1;
-	p1 = p2;
-	*p1 = 20;
+
+	int *p1, *p2; //pointers created != int *p1, p2
+		      //both variables needs * to be pointers
+
+	p1 = &first; //p1 is connected through the address of first
+	p2 = &second;//p2 is connected through the address of second
+
+
+	*p1 = 10; //p1 is now 10 which is connected through the address of first
+	*p2 = *p1; //value pointed by p2 is now the value pointed by p1
+	p1 = p2; //value of pointer is copied
+	*p1 = 20; //p1 = 20
+
+	cout << "First: " << first << endl;
+	cout << "Second: " << second << endl;
 }
