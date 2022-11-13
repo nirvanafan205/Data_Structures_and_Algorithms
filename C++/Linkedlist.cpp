@@ -60,6 +60,7 @@ void append(Node** head_ref, int new_data)
 	return;
 }
 
+//prints LL
 void printList(Node *node)
 {
 	while(node != NULL)
@@ -75,15 +76,41 @@ int main()
 
 	//adds at the head of LL
 	push(&head, 7);
+	//7
 	push(&head, 1);
+	//1 7
 	push(&head, 9);
 	//9 1 7 
 	
 	//add's at the tail LL
 	append(&head, 5);
+	//9 1 7 5
 	append(&head, 2);
+	//9 1 7 5 2
 	append(&head, 9);
 	//9 1 7 5 2 9
 
 	printList(head);
 }
+
+/*
+	LL is a linear DS
+	LL elements are not stored at a contigous location, linked using pointers
+	They are a series of connected nodes
+	Nodes stores the data and address of the next node
+
+	Advantages of Linked Lists over arrays
+		Dynamic Array
+		Ease of Insertion/Deletion
+	
+	Disadvantages 
+		No random access
+		Extra mem space for a pointer w/ each element of the list
+		not cache friendly
+
+	Types of LL
+		Singly - more or traverse LL in only one direction
+		Doubly - cam ,pve pr traverse LL forward and backward
+		Circular - last node of LL links to first/head node of LL in its next pointer and 
+			   first/head contains the link of the last node of the LL in it's prev pointer
+*/
