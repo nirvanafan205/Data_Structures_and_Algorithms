@@ -20,4 +20,14 @@ int main()
 	cout << "firstValue: " << firstValue << endl;
 	cout << "secondValue: " << secondValue << endl;
 
+	int first, second;
+	int *p1, *p2;
+
+	p1 = &first;
+	p2 = &second;
+
+	*p1 = 10;
+	*p2 = *p1;
+	p1 = p2;
+	*p1 = 20;
 }
