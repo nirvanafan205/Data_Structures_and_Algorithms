@@ -45,6 +45,7 @@ int main()
 	int nums[5];
 	int *p;
 
+	//connects pointer to nums
 	p = nums;
 
 	//inputs values into array
