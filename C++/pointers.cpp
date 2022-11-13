@@ -40,4 +40,24 @@ int main()
 
 	cout << "First: " << first << endl;
 	cout << "Second: " << second << endl;
+
+	//array of pointers
+	int nums[5];
+	int *p;
+
+	p = nums;
+
+	//inputs values into array
+	for(int i = 0; i < 5; i++)
+	{
+		*p = i;
+		p++;
+	}
+
+	//outputs values of the array
+	for(int i = 0; i < 5; i++)
+	{
+		cout << nums[i] << endl;
+	}
+
 }
