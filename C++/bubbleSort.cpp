@@ -29,7 +29,6 @@ int main()
 	int nums[] = { 5, 1, 4, 2, 8 };
 	int size = sizeof(nums) / sizeof(nums[0]);
 
-
 	cout << "Unsorted: " << endl;
 	print(nums, size);
 
